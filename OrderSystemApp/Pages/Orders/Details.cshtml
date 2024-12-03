@@ -1,0 +1,132 @@
+@page
+@model OrderSystemApp.Pages.Orders.DetailsModel
+
+@{
+ViewData["Title"] = "Details";
+}
+
+<h1 style="display: flex; width: 35%;">@Html.DisplayFor(model => model.Order.OrderNumber) <span class="order-status">@Html.DisplayFor(model => model.Order.Status)</span></h1>
+<div class="edit-form-buttons" style="width: 20%;">
+    <a asp-page="./Edit" asp-route-id="@Model.Order.ID"><button class="btn btn-primary">Edit</button></a>
+    <button class="btn btn-primary">Ship Order</button>
+    <a asp-page="./Index"><button class="btn btn-secondary">List</button></a>
+</div>
+
+<div class="main-container">
+    <div style="display: flex; flex-direction: column">
+        <div class="order-header-information" style="display: flex; width: 100%;">
+            <div class="new-order-left" style="width: 70%">
+                <table class="primary-information-table" style="width: 100%; margin: auto">
+                    <tr class="primary-information-table-row" style="width: 100%;">
+                        <td style="width: 50%">
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Order #</p>
+                                <p style="color: grey">@Html.DisplayFor(model => model.Order.OrderNumber)</p>
+                            </div>
+                        </td>
+                        <td style="width: 50%">
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Email</p>
+                                <p>@Html.DisplayFor(model => model.Order.Email)</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="primary-information-table-row">
+                        <td>
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Customer</p>
+                                <p>@Html.DisplayFor(model => model.Order.Customer.FirstName) @Html.DisplayFor(model => model.Order.Customer.LastName)</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Phone #</p>
+                                <p>@Html.DisplayFor(model => model.Order.Phone)</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="primary-information-table-row">
+                        <td>
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Shipping Method</p>
+                                <p>@Html.DisplayFor(model => model.Order.ShippingMethod)</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Memo</p>
+                                <p>@Html.DisplayFor(model => model.Order.Memo)</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="primary-information-table-row">
+                        <td>
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Payment Method</p>
+                                <p>@Html.DisplayFor(model => model.Order.PaymentMethod)</p>
+                            </div>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="new-order-right" style="width: 30%">
+                <table class="totals-table" style="background-color: #eaeaea; width: 70%">
+                    <tr style="border-bottom: 1px solid black">
+                        <td>
+                            <p><b>Subtotal</b></p></td>
+                        <td>
+                            <p id="subtotal">£@Html.DisplayFor(model => model.Order.Total)</p></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid black">
+                        <td>
+                            <p><b>Tax Total</b></p></td>
+                        <td>
+                            <p id="tax-total">£@Html.DisplayFor(model => model.Order.TaxTotal)</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><b>Total</b></p></td>
+                        <td>
+                            <p id="total">£@Html.DisplayFor(model => model.Order.GrossAmount)</p></td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <hr/>
+
+        <div class="new-order-line-information" style="width: 100%">
+            <h4>Items</h4>
+            <table id="itemTable" class="new-item-table">
+                <thead>
+                <tr>
+                    <th>Item</th>
+                    <th colspan="2">Description</th>
+                    <th>Rate</th>
+                    <th>Tax Rate</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Tax Total</th>
+                    <th>Gross Amount</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var line in Model.Order.OrderLines)
+                {
+                <tr>
+                    <td> @Html.DisplayFor(modelItem => line.Item)</td>
+                    <td colspan="2"> @Html.DisplayFor(modelItem => line.Description)</td>
+                    <td> @Html.DisplayFor(modelItem => line.Rate)</td>
+                    <td> @Html.DisplayFor(modelItem => line.TaxRate)</td>
+                    <td> @Html.DisplayFor(modelItem => line.Quantity)</td>
+                    <td> @Html.DisplayFor(modelItem => line.Total)</td>
+                    <td> @Html.DisplayFor(modelItem => line.TaxTotal)</td>
+                    <td> @Html.DisplayFor(modelItem => line.GrossAmount)</td>
+                </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

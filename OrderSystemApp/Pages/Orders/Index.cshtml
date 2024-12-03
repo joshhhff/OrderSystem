@@ -1,0 +1,68 @@
+@page
+@model OrderSystemApp.Pages.Orders.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Orders</h1>
+
+<p>
+    <a asp-page="Create"><button class="btn btn-primary">New</button></a>
+</p>
+<table class="table">
+    <thead>
+    <tr>
+        <th style="width: 10%"></th>
+        <th>
+            Order Number
+        </th>
+        <th>
+            Status
+        </th>
+        <th>
+            Customer
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Order[0].Memo)
+        </th>
+        <th>
+            Shipping Method
+        </th>
+        <th>
+            Total
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Order) {
+    <tr>
+        <td>
+            <div class="edit-view-buttons">
+                <a asp-page="./Edit" asp-route-id="@item.ID"><button class="btn btn-primary">Edit</button></a>
+                <a asp-page="./Details" asp-route-id="@item.ID"><button class="btn btn-primary">View</button></a>
+            </div>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.FirstName) @Html.DisplayFor(modelItem => item.Customer.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Memo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShippingMethod)
+        </td>
+        <td>
+            £@Html.DisplayFor(modelItem => item.GrossAmount)
+        </td>
+    </tr>
+}
+    </tbody>
+</table>

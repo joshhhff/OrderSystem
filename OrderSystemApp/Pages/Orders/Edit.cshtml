@@ -1,0 +1,148 @@
+@page
+@model OrderSystemApp.Pages.Orders.EditModel
+
+@{
+ViewData["Title"] = "Details";
+}
+
+<h1 style="display: flex; width: 35%;">@Html.DisplayFor(model => model.Order.OrderNumber) <span class="order-status">@Html.DisplayFor(model => model.Order.Status)</span></h1>
+<form method="POST">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Order.ID" />
+    <input type="hidden" asp-for="Order.Status" />
+    <input type="hidden" asp-for="Order.OrderLines" />
+    <input type="hidden" asp-for="Order.Total" />
+    <input type="hidden" asp-for="Order.TaxTotal" />
+    <input type="hidden" asp-for="Order.GrossAmount" />
+    <div class="edit-form-buttons" style="width: 20%;">
+        <input type="submit" value="Save" class="btn btn-primary"/>
+        <a asp-page="./Details" asp-route-id="@Model.Order.ID"><button type="button" class="btn btn-secondary">Cancel</button></a>
+        <a asp-page="./Delete" asp-route-id="@Model.Order.ID"><button type="button" class="btn btn-danger">Delete</button></a>
+    </div>
+
+<div class="main-container">
+    <div style="display: flex; flex-direction: column">
+        <div class="order-header-information" style="display: flex; width: 100%;">
+            <div class="new-order-left" style="width: 70%">
+                <table class="primary-information-table" style="width: 100%; margin: auto">
+                    <tr class="primary-information-table-row" style="width: 100%;">
+                        <td style="width: 50%">
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Order #</p>
+                                <p style="color: grey">@Html.DisplayFor(model => model.Order.OrderNumber)</p>
+                                <input type="hidden" asp-for="Order.OrderNumber" />
+                            </div>
+                        </td>
+                        <td style="width: 50%">
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Email</p>
+                                <input asp-for="Order.Email" class="form-control" />
+                                <span asp-validation-for="Order.Email" class="text-danger"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="primary-information-table-row">
+                        <td>
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Customer</p>
+                                <select asp-for="Order.CustomerName" class="form-control" asp-items="ViewBag.Customers"></select>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Phone #</p>
+                                <input asp-for="Order.Phone" class="form-control" />
+                                <span asp-validation-for="Order.Phone" class="text-danger"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="primary-information-table-row">
+                        <td>
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Shipping Method</p>
+                                <select class="form-control" id="shipping-method" asp-for="Order.ShippingMethod" asp-items="ViewBag.EditShippingMethods" required>
+                                </select>
+                                <span asp-validation-for="Order.ShippingMethod" class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Memo</p>
+                                <input asp-for="Order.Memo" class="form-control" />
+                                <span asp-validation-for="Order.Memo" class="text-danger"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="primary-information-table-row">
+                        <td>
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Payment Method</p>
+                                <select class="form-control" name="payment-method" asp-for="Order.PaymentMethod" asp-items="ViewBag.PaymentMethods" required>
+                                </select>
+                            </div>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="new-order-right" style="width: 30%">
+                <table class="totals-table" style="background-color: #eaeaea; width: 70%">
+                    <tr style="border-bottom: 1px solid black">
+                        <td>
+                            <p><b>Subtotal</b></p></td>
+                        <td>
+                            <p id="subtotal">£@Html.DisplayFor(model => model.Order.Total)</p></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid black">
+                        <td>
+                            <p><b>Tax Total</b></p></td>
+                        <td>
+                            <p id="tax-total">£@Html.DisplayFor(model => model.Order.TaxTotal)</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><b>Total</b></p></td>
+                        <td>
+                            <p id="total">£@Html.DisplayFor(model => model.Order.GrossAmount)</p></td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <hr/>
+
+        <div class="new-order-line-information" style="width: 100%">
+            <h4>Items</h4>
+            <table id="itemTable" class="new-item-table">
+                <thead>
+                <tr>
+                    <th>Item</th>
+                    <th colspan="2">Description</th>
+                    <th>Rate</th>
+                    <th>Tax Rate</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Tax Total</th>
+                    <th>Gross Amount</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var line in Model.Order.OrderLines)
+                {
+                    <tr>
+                        <td> @Html.DisplayFor(modelItem => line.Item)</td>
+                        <td colspan="2"> @Html.DisplayFor(modelItem => line.Description)</td>
+                        <td> @Html.DisplayFor(modelItem => line.Rate)</td>
+                        <td> @Html.DisplayFor(modelItem => line.TaxRate)</td>
+                        <td> @Html.DisplayFor(modelItem => line.Quantity)</td>
+                        <td> @Html.DisplayFor(modelItem => line.Total)</td>
+                        <td> @Html.DisplayFor(modelItem => line.TaxTotal)</td>
+                        <td> @Html.DisplayFor(modelItem => line.GrossAmount)</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</form>

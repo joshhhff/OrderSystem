@@ -1,0 +1,141 @@
+@page
+@using OrderSystemApp.Models
+@model OrderSystemApp.Pages.Orders.CreateModel
+@{
+ViewData["Title"] = "Home page";
+}
+
+<h1 style="display: flex; width: 35%;">New Order</h1>
+<form id="newOrderForm" method="POST">
+    <div class="edit-form-buttons" style="width: 13%;">
+        <button type="button" class="btn btn-primary" onclick="processOrder()">Submit</button>
+        <a asp-page="./Index"><button type="button" class="btn btn-secondary">Cancel</button></a>
+    </div>
+<div class="main-container">
+    <div style="display: flex; flex-direction: column">
+        <input id="hidden-items-json" asp-for="StringifiedItems" style="display: none"></input>
+        <div class="new-order-form" style="width: 100%">
+            <div class="new-order-header-information" style="display: flex; width: 100%;">
+                <div class="new-order-left" style="width: 70%">
+                    <table class="primary-information-table" style="width: 100%; margin: auto">
+                        <tr class="primary-information-table-row" style="width: 100%;">
+                            <td style="width: 50%">
+                                <div style="text-align: left">
+                                    <p style="font-weight: bold">Sales Order #</p>
+                                    <p style="color: grey">To be Generated</p>
+                                </div>
+                            </td>
+                            <td style="width: 50%">
+                                <div style="text-align: left">
+                                    <p style="font-weight: bold">Email</p>
+                                    <input type="email" class="form-control" placeholder="Enter email" asp-for="Order.Email" required/>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="primary-information-table-row">
+                            <td>
+                                <div style="text-align: left">
+                                    <p style="font-weight: bold">Customer</p>
+                                    <select asp-for="Order.CustomerName" class="form-control" asp-items="ViewBag.Customers"></select>
+                                </div>
+                            </td>
+                            <td>
+                                <div style="text-align: left">
+                                    <p style="font-weight: bold">Phone #</p>
+                                    <input type="tel" class="form-control" placeholder="00000 000000" asp-for="Order.Phone" required/>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="primary-information-table-row">
+                            <td>
+                                <div style="text-align: left">
+                                    <p style="font-weight: bold">Shipping Method</p>
+                                    <select class="form-control" id="shipping-method" asp-for="Order.ShippingMethod" asp-items="ViewBag.ShippingMethods" required>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div style="text-align: left">
+                                    <p style="font-weight: bold">Memo</p>
+                                    <input type="text" class="form-control" placeholder="Enter notes" asp-for="Order.Memo" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="primary-information-table-row">
+                            <td>
+                                <div style="text-align: left">
+                                    <p style="font-weight: bold">Payment Method</p>
+                                    <select class="form-control" name="payment-method" asp-for="Order.PaymentMethod" asp-items="ViewBag.PaymentMethods" required>
+                                    </select>
+                                </div>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="new-order-right" style="width: 30%; display: flex;">
+                    <table class="totals-table" style="background-color: #eaeaea; width: 70%; margin: auto; box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);">
+                        <tr style="border-bottom: 1px solid black">
+                            <td>
+                                <p><b>Subtotal</b></p></td>
+                            <td>
+                                <p id="subtotal">£0.00</p></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid black">
+                            <td>
+                                <p><b>Tax Total</b></p></td>
+                            <td>
+                                <p id="tax-total">£0.00</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><b>Total</b></p></td>
+                            <td>
+                                <p id="total">£0.00</p></td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+            <hr/>
+            <div class="new-order-line-information" style="width: 100%">
+                <h4>Items</h4>
+                <table id="itemTable" class="new-item-table">
+                    <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th colspan="2">Description</th>
+                        <th>Rate</th>
+                        <th>Tax Rate</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Tax Total</th>
+                        <th>Gross Amount</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="new-item-row" id="lineid-0">
+                        <td id="line-0-item">
+                            <select class="form-control" asp-items="ViewBag.Products" onchange="updateProductInfo(this)">
+                                <option value="">Select Item</option>
+                            </select>
+                        </td>
+                        <td id="line-0-description" colspan="2"><input type="text" class="description form-control" readonly></td>
+                        <td id="line-0-rate"><input type="text" class="rate form-control" readonly></td>
+                        <td id="line-0-tax-rate"><input type="text" class="line-tax-rate form-control" readonly></td>
+                        <td id="line-0-quantity"><input type="number" class="line-quantity form-control" oninput="calculateGrossAmount(this)" min="1" required></td>
+                        <td id="line-0-total"><input type="text" class="line-total form-control" readonly></td>
+                        <td id="line-0-tax-total"><input type="text" class="line-tax-total form-control" readonly></td>
+                        <td id="line-0-gross-amount"><input type="text" class="line-gross-amount form-control" readonly></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="add-remove-item-buttons">
+                    <button type="button" class="btn btn-primary" onclick="addItemRow()">Add Item</button>
+                    <button type="button" class="btn btn-secondary" id="removeLastRowButton" onclick="removeLastRow()" style="display: none;">Remove Item</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
