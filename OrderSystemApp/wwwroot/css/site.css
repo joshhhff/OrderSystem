@@ -1,0 +1,143 @@
+html {
+  font-size: 14px;
+}
+
+.navbar {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+td p {
+  margin-bottom: 0 !important;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: #eaeaea;
+}
+
+.main-container {
+  background-color: white;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* General CSS - START */
+.edit-form-buttons { /* Width is set on each individual instance due to different number of buttons */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.edit-view-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-view-buttons a button {
+  font-size: 12px;
+}
+
+/* General CSS - END */
+
+/* Login Page CSS - START */
+.login-screen {
+  width: 80% !important;
+  height: 80vh !important;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.login-form {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+/* Login Page CSS - END */
+
+/* New Order Page CSS - START */
+.primary-information-table-row td {
+  text-align: center;
+  padding: 10px;
+}
+
+.totals-table tr td {
+  padding: 10px;
+}
+
+.new-item-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.new-item-row td {
+  border: 1px solid #eaeaea;
+  text-align: center;
+}
+
+.new-item-row td input {
+  background: none;
+  width: 100%;
+}
+
+.item-select {
+  width: 100%;
+}
+
+.new-item-button {
+  background-color: #6B8B99;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid grey;
+  font-size: 10px;
+  transition: 0.2s ease-in-out;
+  width: fit-content;
+}
+
+.remove-item-row-button {
+  background-color: #eaeaea;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid grey;
+  font-size: 10px;
+  transition: 0.2s ease-in-out;
+  width: fit-content;
+}
+
+.new-item-button:hover {
+  scale: 1.05;
+}
+
+.add-remove-item-buttons {
+  margin-top: 10px;
+}
+
+/* New Order Page CSS - END */
+
+/* Order Details Page CSS - START */
+.order-status {
+  background-color: #dae8fc;
+  padding: 10px;
+  margin: auto;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
