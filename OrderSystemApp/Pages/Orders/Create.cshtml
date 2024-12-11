@@ -21,7 +21,7 @@ ViewData["Title"] = "Home page";
                         <tr class="primary-information-table-row" style="width: 100%;">
                             <td style="width: 50%">
                                 <div style="text-align: left">
-                                    <p style="font-weight: bold">Sales Order #</p>
+                                    <p style="font-weight: bold">Order #</p>
                                     <p style="color: grey">To be Generated</p>
                                 </div>
                             </td>
@@ -50,7 +50,7 @@ ViewData["Title"] = "Home page";
                             <td>
                                 <div style="text-align: left">
                                     <p style="font-weight: bold">Shipping Method</p>
-                                    <select class="form-control" id="shipping-method" asp-for="Order.ShippingMethod" asp-items="ViewBag.ShippingMethods" required>
+                                    <select class="form-control" asp-for="Order.ShippingMethod" asp-items="ViewBag.ShippingMethods" required>
                                     </select>
                                 </div>
                             </td>
@@ -65,7 +65,7 @@ ViewData["Title"] = "Home page";
                             <td>
                                 <div style="text-align: left">
                                     <p style="font-weight: bold">Payment Method</p>
-                                    <select class="form-control" name="payment-method" asp-for="Order.PaymentMethod" asp-items="ViewBag.PaymentMethods" required>
+                                    <select class="form-control" asp-for="Order.PaymentMethod" asp-items="ViewBag.PaymentMethods" required>
                                     </select>
                                 </div>
 
@@ -108,7 +108,7 @@ ViewData["Title"] = "Home page";
                         <th>Rate</th>
                         <th>Tax Rate</th>
                         <th>Quantity</th>
-                        <th>Total</th>
+                        <th>Subtotal</th>
                         <th>Tax Total</th>
                         <th>Gross Amount</th>
                     </tr>

@@ -5,69 +5,88 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>Customer</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Customer.FirstName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Customer.FirstName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Customer.LastName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Customer.LastName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Customer.Email)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Customer.Email)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Customer.Phone)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Customer.Phone)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Customer.Address)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Customer.Address)
-        </dd>
-    </dl>
-    <h4>Orders</h4>
-    <table id="order-table" class="customer-order-table">
-    <thead>
-    <tr>
-        <th>Order Number</th>
-        <th>Status</th>
-        <th>Total</th>
-        <th>Tax Total</th>
-        <th>Gross Amount</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var line in Model.Customer.Orders)
-    {
-        <tr>
-            <td>@Html.DisplayFor(modelItem => line.OrderNumber)</td>
-            <td>@Html.DisplayFor(modelItem => line.Status)</td>
-            <td>@Html.DisplayFor(modelItem => line.Total)</td>
-            <td>@Html.DisplayFor(modelItem => line.TaxTotal)</td>
-            <td>@Html.DisplayFor(modelItem => line.GrossAmount)</td>
-        </tr>
-    }
-    </tbody>
-    </table>
+<h1 style="display: flex; width: 35%;">@Html.DisplayFor(model => model.Customer.ID) @Html.DisplayFor(model => model.Customer.FirstName) @Html.DisplayFor(model => model.Customer.LastName)</h1>
+<div class="edit-form-buttons" style="width: 10%;">
+    <a asp-page="./Edit" asp-route-id="@Model.Customer.ID"><button class="btn btn-primary">Edit</button></a>
+    <a asp-page="./Index"><button class="btn btn-secondary">List</button></a>
 </div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.Customer.ID">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+
+<div class="main-container">
+    <div style="display: flex; flex-direction: column">
+        <div class="order-header-information" style="display: flex; width: 100%;">
+            <div class="new-order-left" style="width: 70%">
+                <table class="primary-information-table" style="width: 100%; margin: auto">
+                    <tr class="primary-information-table-row" style="width: 100%;">
+                        <td style="width: 33%">
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Customer Name</p>
+                                <p>@Html.DisplayFor(model => model.Customer.FirstName) @Html.DisplayFor(model => model.Customer.LastName)</p>
+                            </div>
+                        </td>
+                        <td style="width: 33%">
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Email</p>
+                                <p>@Html.DisplayFor(model => model.Customer.Email)</p>
+                            </div>
+                        </td>
+                        <td style="width: 33%">
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Address</p>
+                                <p>@Html.DisplayFor(model => model.Customer.Address)</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="primary-information-table-row">
+                        <td>
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Customer ID</p>
+                                <p>@Html.DisplayFor(model => model.Customer.ID)</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Phone #</p>
+                                <p>@Html.DisplayFor(model => model.Customer.Phone)</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <hr />
+        <div class="new-order-line-information" style="width: 100%">
+            <h4>Orders</h4>
+            <table id="itemTable" class="new-item-table">
+                <thead>
+                    <tr>
+                        <th style="width: 5%;"></th>
+                        <th>Order Number</th>
+                        <th>Status</th>
+                        <th>Memo</th>
+                        <th>Subtotal</th>
+                        <th>Tax Total</th>
+                        <th>Gross Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var line in Model.Customer.Orders)
+                    {
+                        <tr>
+                            <td>
+                                <div class="edit-view-buttons">
+                                    <a asp-page="../Orders/Details" asp-route-id="@line.ID"><button class="btn btn-primary">View</button></a>
+                                </div>
+                            </td>
+                            <td>@Html.DisplayFor(modelItem => line.OrderNumber)</td>
+                            <td>@Html.DisplayFor(modelItem => line.Status)</td>
+                            <td>@Html.DisplayFor(modelItem => line.Memo)</td>
+                            <td>@Html.DisplayFor(modelItem => line.Total)</td>
+                            <td>@Html.DisplayFor(modelItem => line.TaxTotal)</td>
+                            <td>@Html.DisplayFor(modelItem => line.GrossAmount)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

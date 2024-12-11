@@ -1,3 +1,5 @@
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc;
+
 namespace OrderSystemApp.Models;
 
 public class Order
@@ -27,5 +29,10 @@ public class Order
     public ICollection<OrderLine> OrderLines { get; set; }
 
     public Customer Customer { get; set; }
-    
+
+    public override string ToString()
+    {
+        return $"{ID} - {OrderNumber} - {Status} - {CustomerName} - {Email} - {Memo} - {ShippingMethod} - {Phone} - {PaymentMethod} - {Total} - {TaxTotal} - {GrossAmount}";
+    }
+
 }

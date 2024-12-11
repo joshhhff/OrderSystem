@@ -67,10 +67,13 @@ namespace OrderSystemApp.Pages.Orders
             {
                 new SelectListItem { Value = "Standard", Text = "Standard" },
                 new SelectListItem { Value = "Premium", Text = "Premium" }
+
+
             }, "Value", "Text");
+
             ViewData["PaymentMethods"] = new SelectList(new List<SelectListItem>
             {
-                new SelectListItem { Value = "Credit/Debit", Text = "Standard" },
+                new SelectListItem { Value = "Credit/Debit", Text = "Credit/Debit" },
                 new SelectListItem { Value = "Apple Pay", Text = "Apple Pay" },
                 new SelectListItem { Value = "Google Pay", Text = "Google Pay" },
                 new SelectListItem { Value = "Klarna", Text = "Klarna" }
@@ -80,7 +83,7 @@ namespace OrderSystemApp.Pages.Orders
         }
 
         [BindProperty]
-        public Order Order { get; set; } = default!;
+        public Order Order { get; set; }
 
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
@@ -105,7 +108,7 @@ namespace OrderSystemApp.Pages.Orders
             Order.OrderNumber = newOrderNumber.ToString();
             Order.Status = "Not Shipped";    // default to not shipped for new orders
             
-            Console.WriteLine("Shipping Method" + Order.PaymentMethod);
+            Console.WriteLine("Order" + Order.ToString());
             
             _context.Order.Add(Order);    // save order to get id
             await _context.SaveChangesAsync();

@@ -60,7 +60,7 @@ ViewData["Title"] = "Details";
                         <td>
                             <div style="text-align: left">
                                 <p style="font-weight: bold">Shipping Method</p>
-                                <select class="form-control" id="shipping-method" asp-for="Order.ShippingMethod" asp-items="ViewBag.EditShippingMethods" required>
+                                <select class="form-control" asp-for="Order.ShippingMethod" asp-items="ViewBag.EditShippingMethods" required>
                                 </select>
                                 <span asp-validation-for="Order.ShippingMethod" class="text-danger"></span>
                             </div>
@@ -77,7 +77,7 @@ ViewData["Title"] = "Details";
                         <td>
                             <div style="text-align: left">
                                 <p style="font-weight: bold">Payment Method</p>
-                                <select class="form-control" name="payment-method" asp-for="Order.PaymentMethod" asp-items="ViewBag.PaymentMethods" required>
+                                <select class="form-control" asp-for="Order.PaymentMethod" asp-items="ViewBag.PaymentMethods" required>
                                 </select>
                             </div>
 
@@ -85,8 +85,8 @@ ViewData["Title"] = "Details";
                     </tr>
                 </table>
             </div>
-            <div class="new-order-right" style="width: 30%">
-                <table class="totals-table" style="background-color: #eaeaea; width: 70%">
+                <div class="new-order-right" style="width: 30%; display: flex;">
+                    <table class="totals-table" style="background-color: #eaeaea; width: 70%; margin: auto; box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);">
                     <tr style="border-bottom: 1px solid black">
                         <td>
                             <p><b>Subtotal</b></p></td>

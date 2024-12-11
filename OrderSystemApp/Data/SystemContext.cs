@@ -14,12 +14,13 @@ namespace OrderSystemApp.Data
         {
         }
 
-        public DbSet<OrderSystemApp.Models.Customer> Customer { get; set; }
-        public DbSet<OrderSystemApp.Models.Order> Order { get; set; }
-        public DbSet<OrderSystemApp.Models.OrderLine> OrderLine { get; set; }
-        public DbSet<OrderSystemApp.Models.Role> Role { get; set; }
-        public DbSet<OrderSystemApp.Models.OrderLine> User { get; set; }
-        
+        public DbSet<Customer> Customer { get; set; }
+        public DbSet<Order> Order { get; set; }
+        public DbSet<OrderLine> OrderLine { get; set; }
+        public DbSet<Role> Role { get; set; }
+        public DbSet<User> User { get; set; }
+        public DbSet<Product> Product { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Customer>().ToTable("Customer");
@@ -27,7 +28,8 @@ namespace OrderSystemApp.Data
             modelBuilder.Entity<OrderLine>().ToTable("OrderLine");
             modelBuilder.Entity<Role>().ToTable("Role");
             modelBuilder.Entity<User>().ToTable("User");
+            modelBuilder.Entity<Product>().ToTable("Product");
         }
-        public DbSet<OrderSystemApp.Models.Product> Product { get; set; }
+       
     }
 }

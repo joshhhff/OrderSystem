@@ -18,7 +18,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
+                <ul class="navbar-nav flex-grow-1" style="align-items: center;">
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-page="/Orders/Index">Orders</a>
                     </li>
@@ -31,6 +31,9 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-page="/Users/Index">Users</a>
                     </li>
+                    <li class="nav-item" style="margin-left: auto;">
+                        <p class="nav-link text-dark" onclick="logOutUser()" style="margin-bottom: 0;">Log Out</p>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -41,12 +44,6 @@
         @RenderBody()
     </main>
 </div>
-
-<footer class="border-top footer text-muted">
-    <div class="container">
-        &copy; 2024 - Order System (Josh Ford) - <a asp-area="" asp-page="/Privacy">Privacy</a>
-    </div>
-</footer>
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

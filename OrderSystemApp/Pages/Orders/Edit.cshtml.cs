@@ -39,7 +39,7 @@ namespace OrderSystemApp.Pages.Orders
             }, "Value", "Text");
             ViewData["PaymentMethods"] = new SelectList(new List<SelectListItem>
             {
-                new SelectListItem { Value = "Credit/Debit", Text = "Standard" },
+                new SelectListItem { Value = "Credit/Debit", Text = "Credit/Debit" },
                 new SelectListItem { Value = "Apple Pay", Text = "Apple Pay" },
                 new SelectListItem { Value = "Google Pay", Text = "Google Pay" },
                 new SelectListItem { Value = "Klarna", Text = "Klarna" }

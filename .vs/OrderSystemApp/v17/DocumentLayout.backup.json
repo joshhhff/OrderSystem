@@ -1,0 +1,297 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jjmfo\\OneDrive\\Code\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\jjmfo\\onedrive\\code\\ordersystemapp\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\jjmfo\\onedrive\\code\\ordersystemapp\\controllers\\getproductdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\controllers\\getproductdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\jjmfo\\onedrive\\code\\ordersystemapp\\pages\\orders\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\pages\\orders\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\jjmfo\\onedrive\\code\\ordersystemapp\\pages\\orders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\pages\\orders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\jjmfo\\onedrive\\code\\ordersystemapp\\controllers\\getproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\controllers\\getproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\jjmfo\\onedrive\\code\\ordersystemapp\\pages\\orders\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\pages\\orders\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\jjmfo\\onedrive\\code\\ordersystemapp\\pages\\customers\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\pages\\customers\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\jjmfo\\onedrive\\code\\ordersystemapp\\pages\\customers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\pages\\customers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\jjmfo\\onedrive\\code\\ordersystemapp\\pages\\customers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\pages\\customers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\jjmfo\\onedrive\\code\\ordersystemapp\\pages\\customers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\pages\\customers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\jjmfo\\onedrive\\code\\ordersystemapp\\pages\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\pages\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\jjmfo\\onedrive\\code\\ordersystemapp\\pages\\customers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\pages\\customers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\jjmfo\\onedrive\\code\\ordersystemapp\\pages\\orders\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\pages\\orders\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\jjmfo\\onedrive\\code\\ordersystemapp\\pages\\orders\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\pages\\orders\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\jjmfo\\onedrive\\code\\ordersystemapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\jjmfo\\onedrive\\code\\ordersystemapp\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\jjmfo\\onedrive\\code\\ordersystemapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "OrderSystemApp\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "OrderSystemApp\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAQwMEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-04T14:35:19.011Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetProducts.cs",
+              "DocumentMoniker": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Controllers\\GetProducts.cs",
+              "RelativeDocumentMoniker": "OrderSystemApp\\Controllers\\GetProducts.cs",
+              "ToolTip": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Controllers\\GetProducts.cs",
+              "RelativeToolTip": "OrderSystemApp\\Controllers\\GetProducts.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T16:15:55.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetProductDetails.cs",
+              "DocumentMoniker": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Controllers\\GetProductDetails.cs",
+              "RelativeDocumentMoniker": "OrderSystemApp\\Controllers\\GetProductDetails.cs",
+              "ToolTip": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Controllers\\GetProductDetails.cs",
+              "RelativeToolTip": "OrderSystemApp\\Controllers\\GetProductDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T16:15:53.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Orders\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "OrderSystemApp\\Pages\\Orders\\Create.cshtml.cs",
+              "ToolTip": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Orders\\Create.cshtml.cs",
+              "RelativeToolTip": "OrderSystemApp\\Pages\\Orders\\Create.cshtml.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T16:13:19.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Customers\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "OrderSystemApp\\Pages\\Customers\\Create.cshtml.cs",
+              "ToolTip": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Customers\\Create.cshtml.cs",
+              "RelativeToolTip": "OrderSystemApp\\Pages\\Customers\\Create.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T20:29:40.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Customers\\Create.cshtml",
+              "RelativeDocumentMoniker": "OrderSystemApp\\Pages\\Customers\\Create.cshtml",
+              "ToolTip": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Customers\\Create.cshtml",
+              "RelativeToolTip": "OrderSystemApp\\Pages\\Customers\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T20:27:38.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Orders\\Create.cshtml",
+              "RelativeDocumentMoniker": "OrderSystemApp\\Pages\\Orders\\Create.cshtml",
+              "ToolTip": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Orders\\Create.cshtml",
+              "RelativeToolTip": "OrderSystemApp\\Pages\\Orders\\Create.cshtml",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAAsAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T20:27:26.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Customers\\Edit.cshtml",
+              "RelativeDocumentMoniker": "OrderSystemApp\\Pages\\Customers\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Customers\\Edit.cshtml",
+              "RelativeToolTip": "OrderSystemApp\\Pages\\Customers\\Edit.cshtml",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwEIAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T20:15:55.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Customers\\Details.cshtml",
+              "RelativeDocumentMoniker": "OrderSystemApp\\Pages\\Customers\\Details.cshtml",
+              "ToolTip": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Customers\\Details.cshtml",
+              "RelativeToolTip": "OrderSystemApp\\Pages\\Customers\\Details.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAwwEwAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T19:57:29.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Orders\\Details.cshtml",
+              "RelativeDocumentMoniker": "OrderSystemApp\\Pages\\Orders\\Details.cshtml",
+              "ToolTip": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Orders\\Details.cshtml",
+              "RelativeToolTip": "OrderSystemApp\\Pages\\Orders\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T19:57:03.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Details.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Orders\\Details.cshtml.cs",
+              "RelativeDocumentMoniker": "OrderSystemApp\\Pages\\Orders\\Details.cshtml.cs",
+              "ToolTip": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Orders\\Details.cshtml.cs",
+              "RelativeToolTip": "OrderSystemApp\\Pages\\Orders\\Details.cshtml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T19:56:57.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Orders\\Edit.cshtml",
+              "RelativeDocumentMoniker": "OrderSystemApp\\Pages\\Orders\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Orders\\Edit.cshtml",
+              "RelativeToolTip": "OrderSystemApp\\Pages\\Orders\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T19:53:30.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "OrderSystemApp\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "OrderSystemApp\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-07T19:50:47.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "OrderSystemApp\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "OrderSystemApp\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACEAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T19:49:33.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Customers\\Index.cshtml",
+              "RelativeDocumentMoniker": "OrderSystemApp\\Pages\\Customers\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Customers\\Index.cshtml",
+              "RelativeToolTip": "OrderSystemApp\\Pages\\Customers\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T19:45:50.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Orders\\Index.cshtml",
+              "RelativeDocumentMoniker": "OrderSystemApp\\Pages\\Orders\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Pages\\Orders\\Index.cshtml",
+              "RelativeToolTip": "OrderSystemApp\\Pages\\Orders\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T19:45:21.508Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Models\\User.cs",
+              "RelativeDocumentMoniker": "OrderSystemApp\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\jjmfo\\OneDrive\\Code\\OrderSystemApp\\Models\\User.cs",
+              "RelativeToolTip": "OrderSystemApp\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T18:48:17.47Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
