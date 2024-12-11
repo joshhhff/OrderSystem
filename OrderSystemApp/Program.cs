@@ -1,11 +1,18 @@
+using CO550WebApp.Services.Auth;
+using CO550WebApp.Services.Encryption;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using OrderSystemApp.Data;
+using OrderSystemApp.Factories.UserFactory;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
+
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IUserFactory, UserFactory>();
+builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 
 // Add services to the container.
 builder.Services.AddRazorPages();
