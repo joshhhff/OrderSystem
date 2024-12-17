@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\rxgqq\\projects\\OrderSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\rxgqq\\projects\\ordersystem\\ordersystemapp\\services\\auth\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\services\\auth\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\rxgqq\\projects\\ordersystem\\ordersystemapp\\services\\auth\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\services\\auth\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\rxgqq\\projects\\ordersystem\\ordersystemapp\\services\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\services\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\rxgqq\\projects\\ordersystem\\ordersystemapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -37,18 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\rxgqq\\projects\\ordersystem\\ordersystemapp\\pages\\customers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\pages\\customers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\rxgqq\\projects\\ordersystem\\ordersystemapp\\services\\auth\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\services\\auth\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\rxgqq\\projects\\ordersystem\\ordersystemapp\\services\\auth\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\services\\auth\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\rxgqq\\projects\\ordersystem\\ordersystemapp\\services\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|solutionrelative:ordersystemapp\\services\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D7B58D5-4508-41CB-A990-AB7A987CA209}|OrderSystemApp\\OrderSystemApp.csproj|c:\\users\\rxgqq\\projects\\ordersystem\\ordersystemapp\\utils\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -122,7 +122,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
@@ -139,20 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\rxgqq\\projects\\OrderSystem\\OrderSystemApp\\appsettings.json",
-              "RelativeDocumentMoniker": "OrderSystemApp\\appsettings.json",
-              "ToolTip": "C:\\Users\\rxgqq\\projects\\OrderSystem\\OrderSystemApp\\appsettings.json",
-              "RelativeToolTip": "OrderSystemApp\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-11T15:18:45.206Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\rxgqq\\projects\\OrderSystem\\OrderSystemApp\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "OrderSystemApp\\Pages\\Index.cshtml.cs",
@@ -165,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\rxgqq\\projects\\OrderSystem\\OrderSystemApp\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "OrderSystemApp\\Pages\\Index.cshtml",
@@ -178,20 +165,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\rxgqq\\projects\\OrderSystem\\OrderSystemApp\\Program.cs",
               "RelativeDocumentMoniker": "OrderSystemApp\\Program.cs",
               "ToolTip": "C:\\Users\\rxgqq\\projects\\OrderSystem\\OrderSystemApp\\Program.cs",
               "RelativeToolTip": "OrderSystemApp\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAhAAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAgwCIAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-11T15:09:06.676Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "IUserFactory.cs",
               "DocumentMoniker": "C:\\Users\\rxgqq\\projects\\OrderSystem\\OrderSystemApp\\Factories\\UserFactory\\IUserFactory.cs",
               "RelativeDocumentMoniker": "OrderSystemApp\\Factories\\UserFactory\\IUserFactory.cs",
@@ -204,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\rxgqq\\projects\\OrderSystem\\OrderSystemApp\\Services\\Auth\\IAuthService.cs",
               "RelativeDocumentMoniker": "OrderSystemApp\\Services\\Auth\\IAuthService.cs",
@@ -212,11 +199,12 @@
               "RelativeToolTip": "OrderSystemApp\\Services\\Auth\\IAuthService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T14:51:19.081Z"
+              "WhenOpened": "2024-12-11T14:51:19.081Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "UserFactory.cs",
               "DocumentMoniker": "C:\\Users\\rxgqq\\projects\\OrderSystem\\OrderSystemApp\\Factories\\UserFactory\\UserFactory.cs",
               "RelativeDocumentMoniker": "OrderSystemApp\\Factories\\UserFactory\\UserFactory.cs",
@@ -229,7 +217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\rxgqq\\projects\\OrderSystem\\OrderSystemApp\\Pages\\Customers\\Edit.cshtml",
               "RelativeDocumentMoniker": "OrderSystemApp\\Pages\\Customers\\Edit.cshtml",
@@ -241,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 2,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\rxgqq\\projects\\OrderSystem\\OrderSystemApp\\Services\\Auth\\AuthService.cs",
               "RelativeDocumentMoniker": "OrderSystemApp\\Services\\Auth\\AuthService.cs",
@@ -249,11 +237,12 @@
               "RelativeToolTip": "OrderSystemApp\\Services\\Auth\\AuthService.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAYwCQAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T14:51:05.429Z"
+              "WhenOpened": "2024-12-11T14:51:05.429Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "SystemContext.cs",
               "DocumentMoniker": "C:\\Users\\rxgqq\\projects\\OrderSystem\\OrderSystemApp\\Data\\SystemContext.cs",
               "RelativeDocumentMoniker": "OrderSystemApp\\Data\\SystemContext.cs",
@@ -275,6 +264,32 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-11T14:52:04.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "C:\\Users\\rxgqq\\projects\\OrderSystem\\OrderSystemApp\\Services\\Auth\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "OrderSystemApp\\Services\\Auth\\PasswordHasher.cs",
+              "ToolTip": "C:\\Users\\rxgqq\\projects\\OrderSystem\\OrderSystemApp\\Services\\Auth\\PasswordHasher.cs",
+              "RelativeToolTip": "OrderSystemApp\\Services\\Auth\\PasswordHasher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T14:54:58.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\rxgqq\\projects\\OrderSystem\\OrderSystemApp\\appsettings.json",
+              "RelativeDocumentMoniker": "OrderSystemApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\rxgqq\\projects\\OrderSystem\\OrderSystemApp\\appsettings.json",
+              "RelativeToolTip": "OrderSystemApp\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-11T15:18:45.206Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -302,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\rxgqq\\projects\\OrderSystem\\OrderSystemApp\\Models\\User.cs",
               "RelativeDocumentMoniker": "OrderSystemApp\\Models\\User.cs",
@@ -312,18 +327,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-04T18:48:17.47Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PasswordHasher.cs",
-              "DocumentMoniker": "C:\\Users\\rxgqq\\projects\\OrderSystem\\OrderSystemApp\\Services\\Auth\\PasswordHasher.cs",
-              "RelativeDocumentMoniker": "OrderSystemApp\\Services\\Auth\\PasswordHasher.cs",
-              "ToolTip": "C:\\Users\\rxgqq\\projects\\OrderSystem\\OrderSystemApp\\Services\\Auth\\PasswordHasher.cs",
-              "RelativeToolTip": "OrderSystemApp\\Services\\Auth\\PasswordHasher.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T14:54:58.16Z"
             },
             {
               "$type": "Document",
