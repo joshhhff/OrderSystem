@@ -1,0 +1,43 @@
+﻿@page
+@model OrderSystemApp.Pages.Users.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 style="display: flex; width: 50%;">@Html.DisplayFor(model => model.User.ID) @Html.DisplayFor(model => model.User.Email)</h1>
+<div class="edit-form-buttons" style="width: 10%;">
+    <a asp-page="./Edit" asp-route-id="@Model.User.ID"><button class="btn btn-primary">Edit</button></a>
+    <a asp-page="./Index"><button class="btn btn-secondary">List</button></a>
+</div>
+
+<div class="main-container">
+    <div style="display: flex; flex-direction: column">
+        <div class="order-header-information" style="display: flex; width: 100%;">
+            <div class="new-order-left" style="width: 70%">
+                <table class="primary-information-table" style="width: 100%; margin: auto">
+                    <tr class="primary-information-table-row" style="width: 100%;">
+                        <td style="width: 33%">
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Email</p>
+                                <p>@Html.DisplayFor(model => model.User.Email)</p>
+                            </div>
+                        </td>
+                        <td style="width: 33%">
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Role</p>
+                                <p>@Html.DisplayFor(model => model.User.Role.RoleName)</p>
+                            </div>
+                        </td>
+                        <td style="width: 33%">
+                            <div style="text-align: left">
+                                <p style="font-weight: bold">Associated Customer</p>
+                                <p>@Html.DisplayFor(model => model.User.Customer.FirstName) @Html.DisplayFor(model => model.User.Customer.LastName)</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

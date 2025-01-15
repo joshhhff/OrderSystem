@@ -1,7 +1,6 @@
-using CO550WebApp.Services.Auth;
-using CO550WebApp.Services.Encryption;
+using OrderSystemApp.Services.Auth;
+using OrderSystemApp.Utils;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using OrderSystemApp.Data;
 using OrderSystemApp.Factories.UserFactory;
 
@@ -9,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
+
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserFactory, UserFactory>();
@@ -20,6 +21,19 @@ builder.Services.AddDbContext<SystemContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("SystemContext") ?? throw new InvalidOperationException("Connection string 'SystemContext' not found.")));
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+// Add CORS policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
+});
+
+builder.Services.AddSession();  // Add session service
 
 var app = builder.Build();
 
@@ -42,14 +56,14 @@ using (var scope = app.Services.CreateScope())
 
     var context = services.GetRequiredService<SystemContext>();
     //context.Database.EnsureCreated();
-    // DbInitializer.Initialize(context);
+    //DbInitializer.Initialize(context);
 }
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseSession();
 app.UseAuthorization();
 
 app.MapRazorPages();

@@ -8,11 +8,12 @@
 <h1>Products</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create"><button class="btn btn-primary">New</button></a>
 </p>
 <table class="table">
     <thead>
         <tr>
+            <th style="width: 10%"></th>
             <th>
                 @Html.DisplayNameFor(model => model.Product[0].Name)
             </th>
@@ -23,17 +24,19 @@
                 @Html.DisplayNameFor(model => model.Product[0].Rate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Product[0].TaxRateString)
+                Tax Rate
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Product[0].TaxRateDecimal)
-            </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model.Product) {
         <tr>
+            <td>
+                <div class="edit-view-buttons">
+                    <a asp-page="./Edit" asp-route-id="@item.ID"><button class="btn btn-primary">Edit</button></a>
+                    <a asp-page="./Details" asp-route-id="@item.ID"><button class="btn btn-primary">View</button></a>
+                </div>
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
@@ -45,14 +48,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TaxRateString)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TaxRateDecimal)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
             </td>
         </tr>
 }

@@ -1,5 +1,5 @@
 ﻿@page "/"
-@using CO550WebApp.Pages
+@using OrderSystemApp.Pages
 @model IndexModel
 @{
     ViewData["Title"] = "Login";
@@ -19,11 +19,11 @@
             </div>
 
             <div class="submit-container">
-                <input type="submit" class="submit-button" value="Login" />
+                <input type="submit" class="btn btn-primary" style="width: 100%" value="Login" />
             </div>
 
-            <div class="signup-link text-center">
-                <p>Don't have an account? <a href="/register">Sign Up</a></p>
+            <div class="login-error text-center">
+                <p>@this.Model.Error</p>
             </div>
         </form>
     </div>
@@ -31,7 +31,7 @@
 
 <style>
     body {
-        background-color: white;
+        background-color: #eaeaea;
         font-family: 'Arial', sans-serif;
     }
 
@@ -103,17 +103,8 @@
         background-color: lightblue;
     }
 
-    .signup-link p {
+    .login-error p {
         font-size: 14px;
-        color: #777;
-    }
-
-    .signup-link a {
-        color: white;
-        text-decoration: none;
-    }
-
-    .signup-link a:hover {
-        text-decoration: underline;
+        color: red;
     }
 </style>

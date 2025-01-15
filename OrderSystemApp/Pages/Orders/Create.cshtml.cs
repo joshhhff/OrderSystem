@@ -10,19 +10,23 @@ using Microsoft.EntityFrameworkCore;
 using OrderSystemApp.Models;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Http;
+using OrderSystemApp.Services.Auth;
 
 namespace OrderSystemApp.Pages.Orders
 {
     public class CreateModel : PageModel
     {
         private readonly OrderSystemApp.Data.SystemContext _context;
+        private readonly IAuthService _session;
         
         [BindProperty]
         public string StringifiedItems { get; set; }
 
-        public CreateModel(OrderSystemApp.Data.SystemContext context)
+        public CreateModel(OrderSystemApp.Data.SystemContext context, IAuthService session)
         {
             _context = context;
+            _session = session;
         }
         
         public async Task<string> GenerateOrderNumberAsync()
@@ -61,6 +65,14 @@ namespace OrderSystemApp.Pages.Orders
 
         public IActionResult OnGet()
         {
+            var validSession = _session.AuthenticateUserSession();
+
+            if (validSession is null)
+            {
+                Response.Redirect("../");
+                return null;
+            }
+
             ViewData["Customers"] = new SelectList(_context.Customer, "ID", "FirstName");
             ViewData["Products"] = new SelectList(_context.Product, "ID", "Name");
             ViewData["ShippingMethods"] = new SelectList(new List<SelectListItem>

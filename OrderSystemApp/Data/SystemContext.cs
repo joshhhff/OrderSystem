@@ -20,7 +20,6 @@ namespace OrderSystemApp.Data
         public DbSet<Role> Role { get; set; }
         public DbSet<User> User { get; set; }
         public DbSet<Product> Product { get; set; }
-        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

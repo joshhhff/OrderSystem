@@ -7,16 +7,20 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using OrderSystemApp.Models;
 using OrderSystemApp.Data;
+using Microsoft.AspNetCore.Http;
+using OrderSystemApp.Services.Auth;
 
 namespace OrderSystemApp.Pages.Orders
 {
     public class DeleteModel : PageModel
     {
         private readonly OrderSystemApp.Data.SystemContext _context;
+        private readonly IAuthService _session;
 
-        public DeleteModel(OrderSystemApp.Data.SystemContext context)
+        public DeleteModel(OrderSystemApp.Data.SystemContext context, IAuthService session)
         {
             _context = context;
+            _session = session;
         }
 
         [BindProperty]
@@ -24,6 +28,14 @@ namespace OrderSystemApp.Pages.Orders
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
+            var validSession = _session.AuthenticateUserSession();
+
+            if (validSession is null)
+            {
+                Response.Redirect("../");
+                return null;
+            }
+
             if (id == null)
             {
                 return NotFound();

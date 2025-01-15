@@ -1,4 +1,4 @@
-﻿namespace CO550WebApp.Services.Encryption;
+﻿namespace OrderSystemApp.Services.Auth;
 
 public interface IPasswordHasher
 {

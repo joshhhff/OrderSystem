@@ -8,16 +8,19 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using OrderSystemApp.Models;
 using OrderSystemApp.Data;
+using OrderSystemApp.Services.Auth;
 
 namespace OrderSystemApp.Pages.Orders
 {
     public class EditModel : PageModel
     {
         private readonly OrderSystemApp.Data.SystemContext _context;
+        private readonly IAuthService _session;
 
-        public EditModel(OrderSystemApp.Data.SystemContext context)
+        public EditModel(OrderSystemApp.Data.SystemContext context, IAuthService session)
         {
             _context = context;
+            _session = session;
         }
 
         [BindProperty]
@@ -25,6 +28,14 @@ namespace OrderSystemApp.Pages.Orders
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
+            var validSession = _session.AuthenticateUserSession();
+
+            if (validSession is null)
+            {
+                Response.Redirect("../");
+                return null;
+            }
+
             if (id == null)
             {
                 return NotFound();

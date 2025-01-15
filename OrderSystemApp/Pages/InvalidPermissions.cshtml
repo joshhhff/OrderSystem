@@ -1,0 +1,35 @@
+﻿@page "/InvalidPermissions"
+@using OrderSystemApp.Pages
+@model InvalidPermissionsModel
+@{
+    ViewData["Title"] = "Note";
+}
+
+<div class="login-screen">
+    <div class="login-form-container">
+        <h1 style="margin: auto; text-align: center;">Whoops! Looks like you haven't got permissions to access this page.<br><span style="font-size: 50%">Contact your System Administrator for more details</span></h1>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #eaeaea;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .login-screen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .login-form-container {
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 80%;
+    }
+</style>

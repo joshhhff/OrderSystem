@@ -1,4 +1,6 @@
-﻿namespace CO550WebApp.Utils;
+﻿namespace OrderSystemApp.Utils;
+
+using OrderSystemApp.Models;
 
 public sealed class Result<T>(T? value, bool isSuccess, string? error)
 {

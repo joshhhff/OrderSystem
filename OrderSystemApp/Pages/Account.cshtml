@@ -1,0 +1,110 @@
+﻿@page "/Account"
+@using OrderSystemApp.Pages
+@model AccountModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="login-screen">
+    <div class="login-form-container">
+        <form method="POST" class="login-form">
+            <h1 class="display-4">Account</h1>
+
+            <div class="input-group">
+                <label><b>Email</b></label>
+                <p>@Model.User.Email</p>
+            </div>
+            <div class="input-group">
+                <label><b>Role</b></label>
+                <p>@Model.User.Role.RoleName</p>
+            </div>
+            @if (Model.User.CustomerIdString is not null)
+            {
+                <div class="input-group">
+                    <label><b>Related Customer</b></label>
+                    <p>@Model.User.Customer.FirstName @Model.User.Customer.LastName</p>
+                </div>
+            }
+        </form>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #eaeaea;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .login-screen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .login-form-container {
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 80%;
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .display-4 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .login-input {
+        padding: 12px;
+        font-size: 16px;
+        border: 2px solid #ddd;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        transition: border-color 0.3s;
+    }
+
+        .login-input:focus {
+            border-color: grey;
+            outline: none;
+        }
+
+    .submit-container {
+        text-align: center;
+    }
+
+    .submit-button {
+        background-color: lightsteelblue;
+        color: #fff;
+        padding: 12px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s;
+    }
+
+        .submit-button:hover {
+            background-color: lightblue;
+        }
+
+    .login-error p {
+        font-size: 14px;
+        color: red;
+    }
+</style>

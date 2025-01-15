@@ -30,14 +30,9 @@
                 <span asp-validation-for="Product.Rate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Product.TaxRateString" class="control-label"></label>
-                <input asp-for="Product.TaxRateString" class="form-control" />
+                <label>Tax Rate</label>
+                <input asp-for="Product.TaxRateString" class="form-control" placeholder="Example: 10%" />
                 <span asp-validation-for="Product.TaxRateString" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Product.TaxRateDecimal" class="control-label"></label>
-                <input asp-for="Product.TaxRateDecimal" class="form-control" />
-                <span asp-validation-for="Product.TaxRateDecimal" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

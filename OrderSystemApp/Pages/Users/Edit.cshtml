@@ -1,0 +1,53 @@
+﻿@page
+@model OrderSystemApp.Pages.Users.EditModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 style="display: flex; width: 50%;">@Html.DisplayFor(model => model.User.ID) @Html.DisplayFor(model => model.User.Email)</h1>
+
+<form method="POST">
+    <div class="edit-form-buttons" style="width: 20%;">
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <a asp-page="./Details" asp-route-id="@Model.User.ID"><button type="button" class="btn btn-secondary">Cancel</button></a>
+        <a asp-page="./Delete" asp-route-id="@Model.User.ID"><button type="button" class="btn btn-danger">Delete</button></a>
+    </div>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="User.ID" />
+    <input type="hidden" asp-for="User.Password" />
+
+    <div class="main-container">
+        <div style="display: flex; flex-direction: column">
+            <div class="order-header-information" style="display: flex; width: 100%;">
+                <div class="new-order-left" style="width: 70%">
+                    <table class="primary-information-table" style="width: 100%; margin: auto">
+                        <tr class="primary-information-table-row" style="width: 100%;">
+                            <td style="width: 33%">
+                                <div style="text-align: left">
+                                    <p style="font-weight: bold">Email</p>
+                                    <input asp-for="User.Email" class="form-control" />
+                                    <span asp-validation-for="User.Email" class="text-danger"></span>
+                                </div>
+                            </td>
+                            <td style="width: 33%">
+                                <div style="text-align: left">
+                                    <p style="font-weight: bold">Role</p>
+                                    <select asp-for="User.RoleIdString" class="form-control" asp-items="ViewBag.Roles"></select>
+                                </div>
+                            </td>
+                            <td style="width: 33%">
+                                <div style="text-align: left">
+                                    <p style="font-weight: bold">Associated Customer</p>
+                                    <select class="form-control" asp-for="User.CustomerIdString" asp-items="ViewBag.Customers">
+                                    </select>
+                                    <span asp-validation-for="User.CustomerIdString" class="text-danger"></span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

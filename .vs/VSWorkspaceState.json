@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\.github",
+    "\\.github\\workflows",
+    "\\OrderSystemApp\\Pages",
+    "\\OrderSystemApp\\Pages\\Orders"
   ],
-  "SelectedNode": "\\OrderSystemApp.sln",
+  "SelectedNode": "\\OrderSystemApp",
   "PreviewInSolutionExplorer": false
 }

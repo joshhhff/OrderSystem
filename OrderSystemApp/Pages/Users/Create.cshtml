@@ -1,0 +1,50 @@
+﻿@page
+@model OrderSystemApp.Pages.Users.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 style="display: flex; width: 50%;">New User</h1>
+
+<form method="POST">
+    <div class="edit-form-buttons" style="width: 13%;">
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <a asp-page="./Index"><button type="button" class="btn btn-secondary">Cancel</button></a>
+    </div>
+
+    <div class="main-container">
+        <div style="display: flex; flex-direction: column">
+            <div class="order-header-information" style="display: flex; width: 100%;">
+                <div class="new-order-left" style="width: 70%">
+                    <table class="primary-information-table" style="width: 100%; margin: auto">
+                        <tr class="primary-information-table-row" style="width: 100%;">
+                            <td style="width: 33%">
+                                <div style="text-align: left">
+                                    <p style="font-weight: bold">Email</p>
+                                    <input asp-for="User.Email" class="form-control" />
+                                    <span asp-validation-for="User.Email" class="text-danger"></span>
+                                </div>
+                            </td>
+                            <td style="width: 33%">
+                                <div style="text-align: left">
+                                    <p style="font-weight: bold">Role</p>
+                                    <select asp-for="User.RoleIdString" class="form-control" asp-items="ViewBag.Roles"></select>
+                                </div>
+                            </td>
+                            <td style="width: 33%">
+                                <div style="text-align: left">
+                                    <p style="font-weight: bold">Associated Customer</p>
+                                    <select class="form-control" asp-for="User.CustomerIdString" asp-items="ViewBag.Customers">
+                                        <option value="">Select Customer</option>
+                                    </select>
+                                    <span asp-validation-for="User.CustomerIdString" class="text-danger"></span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

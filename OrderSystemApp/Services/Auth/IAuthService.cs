@@ -1,10 +1,13 @@
-﻿using CO550WebApp.Utils;
+﻿using OrderSystemApp.Utils;
+using OrderSystemApp.Models;
 
-namespace CO550WebApp.Services.Auth;
+namespace OrderSystemApp.Services.Auth;
 
 public interface IAuthService
 {
-    public Task<Result<bool>> Login(string email, string password);
-    public Task<Result<bool>> CreateUser(string email, string password);
-    public Task<Result<bool>> Logout();
+    public Task<Result<User>> Login(string email, string password);
+    public Task<Result<User>> CreateUser(User user);
+    public Result<bool> Logout();
+    public string? AuthenticateUserSession();
+    public bool? CheckPermissions();
 }

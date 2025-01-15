@@ -15,6 +15,46 @@ const keyMapping = {
     column7: 'grossAmount'
 };
 
+async function logOutUser() {
+    const response = await fetch('/api/Authentication/logout');
+
+    if (response.ok) {
+        window.location.href = '/';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', checkAndHideElements);
+window.addEventListener('popstate', checkAndHideElements);
+
+async function checkAndHideElements() {
+    const response = await fetch(`${window.location.origin}/api/Authentication/permissions`)
+    const role = await response.json();
+    console.log('role id', role);
+
+    const hideOnLoginScreenElements = document.querySelectorAll('.hide-on-login-screen');
+    const isIndexPage = window.location.pathname === '/' || window.location.pathname === '/Index';
+
+    hideOnLoginScreenElements.forEach(element => {
+        if (isIndexPage) {
+            element.style.display = 'none';
+        } else {
+            if (!role.loggedIn) {
+                element.style.display = 'none';
+            } else if (role.loggedIn) {
+                if (element.classList.contains('admin-only') && role.roleID !== '2') {
+                    console.log('LOGGED IN AS USER')
+                    // Current user is logged in as a user and not admin
+                    element.style.display = 'none';
+                } else if (element.classList.contains('admin-only') && role.roleID === '2') {
+                    // CUrrent user logged in as an admin
+                    console.log('LOGGED IN AS ADMIN')
+                    element.style.display = '';
+                }
+            }
+        }
+    });
+}
+
 function processOrder() {
     const table = document.getElementById('itemTable');
     console.log(table)
@@ -85,9 +125,6 @@ function processOrder() {
     } catch(error) {
         console.error('Failed submit', error)
     }
-    // Refresh page
-    //event.preventDefault()
-    //window.location.reload();
 }
 
 // Function to convert key names to meaningful names (for line objects)
@@ -115,7 +152,6 @@ function updateProductInfo(selectElement) {
         fetch(`/api/products/${productId}`)
             .then(response => response.json())
             .then(data => {
-                console.log('item details', data)
                 // Populate the corresponding fields with product data
                 row.querySelector(".description").value = data.description;
                 row.querySelector(".rate").value = data.rate;

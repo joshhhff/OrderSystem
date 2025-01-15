@@ -1,8 +1,8 @@
-using CO550WebApp.Services.Auth;
+using OrderSystemApp.Services.Auth;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace CO550WebApp.Pages;
+namespace OrderSystemApp.Pages;
 
 public class IndexModel : PageModel
 {
@@ -14,6 +14,7 @@ public class IndexModel : PageModel
     public string Email { get; set; }
     [BindProperty]
     public string Password { get; set; }
+    public string Error { get; set; }
 
     public IndexModel(IAuthService auth, ILogger<IndexModel> logger)
     {
@@ -29,9 +30,13 @@ public class IndexModel : PageModel
     public async Task OnPost()
     {
         var result = await _auth.Login(Email, Password);
-        if (!result.IsSuccess) return;
+        if (result.Value is null)
+        {
+            this.Error = "Invalid email or password";
+            return;
+        }
 
-        HttpContext.Session.SetString("TokenAuth", "TestToken");
-        Response.Redirect("/Home");
+        HttpContext.Session.SetString("CurrentUserId", result.Value!.ID.ToString());
+        Response.Redirect("/Orders/Index");
     }
 }
