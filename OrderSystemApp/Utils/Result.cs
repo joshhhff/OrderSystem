@@ -18,7 +18,11 @@
 /// </summary>
 /// <typeparam name="T">The type of the value being returned</typeparam>
 public sealed class Result<T>
+<<<<<<< HEAD
     where T : notnull
+=======
+    where T: notnull
+>>>>>>> 403d921e8551fb3d0de055b5accee74ea99291ef
 {
 
     /// <summary>
@@ -38,7 +42,11 @@ public sealed class Result<T>
 
 
     /// constructor must be private
+<<<<<<< HEAD
     private Result(T? value, bool isSuccess, string? error)
+=======
+    private Result(T? value, bool isSuccess, string? error) 
+>>>>>>> 403d921e8551fb3d0de055b5accee74ea99291ef
     {
         Value = value;
         IsSuccess = isSuccess;
