@@ -35,7 +35,8 @@
               "ViewState": "AgIAADgAAAAAAAAAAAAqwH8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-12-18T11:23:29.976Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -47,7 +48,8 @@
               "RelativeToolTip": "OrderSystemApp\\Pages\\Customers\\Index.cshtml.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAzwCQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T14:25:56.296Z"
+              "WhenOpened": "2025-01-08T14:25:56.296Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
